@@ -98,7 +98,7 @@ Regarding the frames used for the extraction of the provided feats, we extracted
 
 The code of our WT-GCN method is provided for academic, non-commercial use only. Please also check for any restrictions applied in the code parts and datasets used here from other sources (e.g. provided datasets [1,2,3], etc.). If you find the WT-GCN code or any of the provided materials useful in your work, please cite the following publication where this approach was proposed:
 
-N. Gkalelis, D. Daskalakis, V. Mezaris, "Weight-tied graph convolutional networks  for event recognition and explanation in video", IEEE Transactions on Circuits and Systems for Video Technology, vol. XX, no. X, pp. XXX, Month, 2022.
+N. Gkalelis, D. Daskalakis, V. Mezaris, "Weight-tied graph convolutional networks  for event recognition and explanation in video", IEEE Trans. Circuits Syst. Video Technol., vol. XX, no. X, pp. XXX, Month, 2022.
 
 Bibtex:
 ```
