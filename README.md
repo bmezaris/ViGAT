@@ -75,7 +75,7 @@ In this repository, we provide the following models presented in our paper:
 * _model-ylimed-resnet-090.pt_ : YLI-MED model using Resnet FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
 * _model-ylimed-vit-200.pt_ : YLI-MED model using ViT FE trained for 200 epochs with initial lr 1e-3 and scheduling at 110 and 160 epochs.
 
-Features, frames and other useful materials extracted during our experiments are provided in the following ftp server:
+Features, bounding boxes and other useful materials extracted during our experiments are provided in the following ftp server:
 ```
 ftp://multimedia2.iti.gr
 ```
@@ -92,7 +92,7 @@ The data stored in the ftp server are:
 * ActivityNet keyframes used, bounding boxes, classes ids and classes scores (~1 GB): ACTNET_boxes_etc.zip
 * FCVID keyframes used, bounding boxes, classes ids and classes scores (~14 MB): FCVID_boxes_etc.zip
 
-Regarding the frames used for the extraction of the provided feats, we extracted frames from each video using a sampling rate of X for FCVID and YLI-MED resulting in around 25 frames per video and a sampling rate of X for ActivityNet, resulting in around 3 to 6 thousands frames per video. From those, we randomly selected 9 (120 for ActivityNet) and kept the indices of the selected frames per video in a .txt file, included in the *dataset*_boxes_etc.zip file.
+Regarding the frames used for the extraction of the provided feats, we extracted 25 frames from each video for FCVID and YLI-MED and used a sampling rate of 1 frame/second for ActivityNet, resulting in around 3 to 6 thousands frames per video. From those, we randomly selected 9 (120 for ActivityNet) and kept the indices of the selected frames per video in a .txt file, included in the *dataset*_boxes_etc.zip file.
 ## License and Citation
 
 The code of our WT-GCN method is provided for academic, non-commercial use only. Please also check for any restrictions applied in the code parts and datasets used here from other sources (e.g. provided datasets [1,2,3], etc.). If you find the WT-GCN code or any of the provided materials useful in your work, please cite the following publication where this approach was proposed:
