@@ -122,14 +122,14 @@ This work was supported by the EU Horizon 2020 programme under grant agreements 
 
 [1] YY.-G. Jiang, Z. Wu et al. Exploiting feature and class relationships in video categorization with regularized deep neural networks. IEEE Trans. Pattern Anal. Mach. Intell., 40(2):352–364, 2018
 
-[2] B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles, “Activitynet: A large-scale video benchmark for human activity understanding,”  in Proc. IEEE CVPR, 2015, pp. 961–970.
+[2] B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding, in Proc. IEEE CVPR, 2015, pp. 961–970.
 
 [3] J. Bernd, D. Borth et al. The YLI-MED corpus: Characteristics, procedures, and plans. CoRR, abs/1503.04250, 2015.
 
-[4] P. Anderson, X. He et al. Bottom-up and top-down attention for image captioning and visual question answering. In Proc. ICVGIP, pages 6077–6086, Hyderabad, India, Dec. 2018
+[4] P. Anderson, X. He et al. Bottom-up and top-down attention for image captioning and visual question answering. in Proc. ICVGIP, pages 6077–6086, Hyderabad, India, Dec. 2018
 
-[5] S. Ren, K. He et al. Faster R-CNN: Towards real-time object detection with region proposal networks. In Proc. NIPS, volume 28, 2015.
+[5] S. Ren, K. He et al. Faster R-CNN: Towards real-time object detection with region proposal networks. in Proc. NIPS, volume 28, 2015.
 
 [6] A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai et al. An image is worth 16x16 words: Transformers for image recognition at scale, in Proc. ICLR, Virtual Event, Austria, May 2021.
 
-[7] K. He, X. Zhang et al., Deep residual learning for image recognition, in Proc. IEEE/CVF CVPR, Las Vegas, NV, USA, Jun. 2016, pp. 770–778.
+[7] K. He, X. Zhang, S. Ren, and J. Sun. Deep residual learning for image recognition, in Proc. IEEE/CVF CVPR, Las Vegas, NV, USA, Jun. 2016, pp. 770–778.
