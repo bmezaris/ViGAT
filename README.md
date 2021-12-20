@@ -11,12 +11,12 @@ This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalaki
 ## Video preprocessing
 
 Before training our method on any video dataset, the videos must be preprocessed and converted to an appropriate format for efficient data loading (in our work, we sample 9 frames per video for FCVID and YLI-MED and 120 frames per video for ActivityNet;
-on each frame, a variant of the Faster R-CNN object detector is used [4,5] for object detection and an VIT or RESNET152 network is used for extracting a representation of each entire frame as well as each object region).
+on each frame, a variant of the Faster R-CNN object detector is used [4,5] for object detection and an VIT or ResNet-152 network is used for extracting a representation of each entire frame as well as each object region).
 Following video preprocessing, the dataset root directory must contain the following subdirectories:
 * For usage of the VIT extractor:
   * ```vit_global/```: Numpy arrays of size 9x768 (or 120x768) containing the global frame feature vectors for each video (the 9 (120) frames, times the 768-element vector for each frame).
   * ```vit_local/```: Numpy arrays of size 9x50x768 (or 120x50x768) containing the appearance feature vectors of the detected frame objects for each video (the 9 (120) frames, times the 50 most-prominent objects identified by the object detector, times a 768-element vector for each object bounding box).
-* For usage of the RESNET extractor:
+* For usage of the ResNet-152 extractor:
   * ```R152_global/```: Numpy arrays of size 9x2048 (or 120x2048) containing the global frame feature vectors for each video (the 9 (120) frames, times the 2048-element vector for each frame).
   * ```R152_local/```: Numpy arrays of size 9x50x2048 (or 120x50x2048) containing the appearance feature vectors of the detected frame objects for each video (the 9 (120) frames, times the 50 most-prominent objects identified by the object detector, times a 2048-element vector for each object bounding box).
 
@@ -82,11 +82,11 @@ ftp://multimedia2.iti.gr
 To request access credentials for the ftp please send an email to: bmezaris@iti.gr, gkalelis@iti.gr.
 
 The data stored in the ftp server are:
-* FCVID features extracted using RESNET to be placed in the FCVID dataset root directory (~320 GB): FCVID.z01, FCVID.z02, FCVID.z03, FCVID.z04, FCVID.z05, FCVID.z06, FCVID.z07, FCVID.z08, FCVID.z09, FCVID.zip
+* FCVID features extracted using ResNet-152 to be placed in the FCVID dataset root directory (~320 GB): FCVID.z01, FCVID.z02, FCVID.z03, FCVID.z04, FCVID.z05, FCVID.z06, FCVID.z07, FCVID.z08, FCVID.z09, FCVID.zip
 * FCVID features extracted using VIT to be placed in the FCVID dataset root directory (~110 GB): FCVID_feats.z01, FCVID_feats.z02, FCVID_feats.z03, FCVID_feats.zip
 * ActivityNet features extracted using RESNET to be placed in the ActivityNet dataset root directory (~630 GB): ACTNET_feats_RESNET.z01, ACTNET_feats_RESNET.z02, ACTNET_feats_RESNET.z03, ACTNET_feats_RESNET.z04, ACTNET_feats_RESNET.z05, ACTNET_feats_RESNET.z06, ACTNET_feats_RESNET.z07, ACTNET_feats_RESNET.z08, ACTNET_feats_RESNET.z09, ACTNET_feats_RESNET.z10, ACTNET_feats_RESNET.z11, ACTNET_feats_RESNET.z12, ACTNET_feats_RESNET.z13, ACTNET_feats_RESNET.z14, ACTNET_feats_RESNET.z15, ACTNET_feats_RESNET.z16, ACTNET_feats_RESNET.z17, ACTNET_feats_RESNET.zip
 * ActivityNet features extracted using VIT to be placed in the ActivityNet dataset root directory (~240 GB): ACTNET_feats.z01, ACTNET_feats.z02, ACTNET_feats.z03, ACTNET_feats.z04, ACTNET_feats.z05, ACTNET_feats.z06, ACTNET_feats.zip
-* YLI-MED features extracted using RESNET to be placed in the YLI-MED dataset root directory (~6 GB): YLIMED_feats_RESNET.zip
+* YLI-MED features extracted using ResNet-152 to be placed in the YLI-MED dataset root directory (~6 GB): YLIMED_feats_RESNET.zip
 * YLI-MED features extracted using VIT to be placed in the YLI-MED dataset root directory (~3 GB): YLIMED_feats.zip
 * FCVID keyframes used, bounding boxes, classes ids and classes scores (~600 MB): FCVID_boxes_etc.zip
 * ActivityNet keyframes used, bounding boxes, classes ids and classes scores (~1 GB): ACTNET_boxes_etc.zip
