@@ -14,7 +14,7 @@ Before training our method on any video dataset, the videos must be preprocessed
 Specifically, we sample 9 frames per video for FCVID and YLI-MED and 120 frames per video for ActivityNet;
 on each frame, a variant of the Faster R-CNN is used as object detector (OD) [4,5] and the Vision Transformer (ViT) [6] or ResNet-152 [6] is used as feature extractor (FE) for extracting a feature vector representation for the entire frame as well for each object region).
 Following video preprocessing, the dataset root directory must contain the following subdirectories:
-* For usage of the VIT extractor:
+* For usage of the ViT extractor:
   * ```vit_global/```: Numpy arrays of size 9x768 (or 120x768) containing the global frame feature vectors for each video (the 9 (120) frames, times the 768-element vector for each frame).
   * ```vit_local/```: Numpy arrays of size 9x50x768 (or 120x50x768) containing the appearance feature vectors of the detected frame objects for each video (the 9 (120) frames, times the 50 most-prominent objects identified by the object detector, times a 768-element vector for each object bounding box).
 * For usage of the ResNet-152 extractor:
