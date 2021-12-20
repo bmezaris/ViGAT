@@ -104,11 +104,11 @@ Bibtex:
 ```
 @article{WTGCN_CSVT21,
                author    = "N. Gkalelis and D.Daskalakis and V. Mezaris",
-               title     = "Weight-tied graph convolutional networks  for event recognition and explanation in video",
+               title     = "Weight-tied graph convolutional networks for event recognition and explanation in video",
                journal   = "IEEE Trans. Circuits Syst. Video Technol.",
                year      = "2022",
                volume    = "",
-               month     = ,
+               month     = "",
                number    = "",
                pages     = ""
 }
