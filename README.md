@@ -122,11 +122,11 @@ This work was supported by the EU Horizon 2020 programme under grant agreements 
 
 [1] Y.-G. Jiang, Z. Wu, J. Wang, X. Xue, and S.-F. Chang. Exploiting feature and class relationships in video categorization with regularized deep neural networks. IEEE Trans. Pattern Anal. Mach. Intell., vol. 40, no. 2, pp. 352–364, 2018.
 
-[2] B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In Proc. IEEE CVPR, 2015, pp. 961–970.
+[2] B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. ActivityNet: A large-scale video benchmark for human activity understanding. In Proc. IEEE CVPR, 2015, pp. 961–970.
 
 [3] J. Bernd, D. Borth, B. Elizalde, G. Friedland, H. Gallagher et al. The YLI-MED corpus: Characteristics, procedures, and plans. CoRR, vol. abs/1503.04250, 2015.
 
-[4] P. Anderson, X. He et al. Bottom-up and top-down attention for image captioning and visual question answering. In Proc. ICVGIP, pages 6077–6086, Hyderabad, India, Dec. 2018
+[4] P. Anderson, X. He, C. Buehler, D. Teney, M. Johnson et al. Bottomup and top-down attention for image captioning and visual question answering. In Proc. ICVGIP, Hyderabad, India, Dec. 2018, pp. 6077–6086.
 
 [5] S. Ren, K. He, R. Girshick, and J. Sun, “Faster R-CNN: Towards realtime object detection with region proposal networks. In Proc. NIPS, vol. 28, 2015.
 
