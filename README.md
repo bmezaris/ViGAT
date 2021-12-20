@@ -5,8 +5,8 @@ This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalaki
 ## Code requirements
 
 * numpy
+* scikit-learn
 * PyTorch
-* sklearn
 
 ## Video preprocessing
 
