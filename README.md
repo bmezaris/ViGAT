@@ -126,7 +126,7 @@ Y.-G. Jiang, Z. Wu, J. Wang, X. Xue, and S.-F. Chang. Exploiting feature and cla
 
 [2] B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In Proc. IEEE CVPR, 2015, pp. 961–970.
 
-[3] J. Bernd, D. Borth et al. The YLI-MED corpus: Characteristics, procedures, and plans. CoRR, abs/1503.04250, 2015.
+[3] J. Bernd, D. Borth, B. Elizalde, G. Friedland, H. Gallagher et al. The YLI-MED corpus: Characteristics, procedures, and plans. CoRR, vol. abs/1503.04250, 2015.
 
 [4] P. Anderson, X. He et al. Bottom-up and top-down attention for image captioning and visual question answering. In Proc. ICVGIP, pages 6077–6086, Hyderabad, India, Dec. 2018
 
