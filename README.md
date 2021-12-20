@@ -11,7 +11,7 @@ This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalaki
 ## Video preprocessing
 
 Before training our method on any video dataset, the videos must be preprocessed and converted to an appropriate format for efficient data loading (in our work, we sample 9 frames per video for FCVID and YLI-MED and 120 frames per video for ActivityNet;
-on each frame, a variant of the Faster R-CNN object detector is used [4,5] for object detection and an Vision Transformer (ViT) or ResNet-152 network is used for extracting a representation of each entire frame as well as each object region).
+on each frame, a variant of the Faster R-CNN is used as object detector (OD) [4,5] and the Vision Transformer (ViT) [6] or ResNet-152 [6] network is used as feature extractor (FE) for extracting a feature vector representation for the entire frame as well for each object region).
 Following video preprocessing, the dataset root directory must contain the following subdirectories:
 * For usage of the VIT extractor:
   * ```vit_global/```: Numpy arrays of size 9x768 (or 120x768) containing the global frame feature vectors for each video (the 9 (120) frames, times the 768-element vector for each frame).
@@ -128,3 +128,7 @@ This work was supported by the EU Horizon 2020 programme under grant agreements 
 [4] P. Anderson, X. He et al. Bottom-up and top-down attention for image captioning and visual question answering. In Proc. ICVGIP, pages 6077–6086, Hyderabad, India, Dec. 2018
 
 [5] S. Ren, K. He et al. Faster R-CNN: Towards real-time object detection with region proposal networks. In Proc. NIPS, volume 28, 2015.
+
+[6] A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai et al. An image is worth 16x16 words: Transformers for image recognition at scale, in Proc. ICLR, Virtual Event, Austria, May 2021.
+
+[7] K. He, X. Zhang et al., Deep residual learning for image recognition, in Proc. IEEE/CVF CVPR, Las Vegas, NV, USA, Jun. 2016, pp. 770–778.
