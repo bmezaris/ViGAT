@@ -118,14 +118,14 @@ class ACTNET(Dataset):
         return feats, feat_global, label, name
 
 
-class YLIMED(Dataset):
-    NUM_CLASS = 10
-    NUM_FRAMES = 9
+class miniKINETICS(Dataset):
+    NUM_CLASS = 200
+    NUM_FRAMES = 30
     NUM_BOXES = 50
 
     def __init__(self, root_dir, is_train, ext_method):
         self.root_dir = root_dir
-        self.phase = 'Training' if is_train else 'Test'
+        self.phase = 'train' if is_train else 'test'
         if ext_method == 'VIT':
             self.local_folder = 'vit_local'
             self.global_folder = 'vit_global'
@@ -137,38 +137,46 @@ class YLIMED(Dataset):
         else:
             sys.exit("Unknown Extractor")
 
-        split_path = os.path.join(root_dir, 'YLI-MED_Corpus_v.1.4.txt')
-        data_split = np.genfromtxt(split_path, dtype='str', skip_header=1)
+        if self.phase == 'train':
+            split_path = os.path.join(root_dir, 'annotations', 'miniKineticsTrain.csv')
+        else:
+            split_path = os.path.join(root_dir, 'annotations', 'miniKineticsVal.csv')
 
+        vidname_list = []
+        labels_list = []
         self.num_missing = 0
-        mask = np.zeros(data_split.shape[0], dtype=bool)
-        for i, row in enumerate(data_split):
-            if row[7] == 'Ev100':
-                continue
 
-            if row[13] == self.phase:
-                feats_path = os.path.join(root_dir, self.local_folder, row[0] + '.npy')
+        with open(split_path) as f:
+            file = csv.reader(f)
+            header = []
+            header = next(file)
+            if self.phase == 'train':
+                mask = np.zeros(80000, dtype=bool)
+            else:
+                mask = np.zeros(5000, dtype=bool)
+            for i, row in enumerate(file):
+                base = row[1] + '_' + row[2].zfill(6) + '_' + row[3].zfill(6) + '_frames'
+                vidname_list.append(base)
+                labels_list.append(list(map(int, [row[0]])))
+                feats_path = os.path.join(root_dir, self.local_folder, base + '.npy')
                 if os.path.exists(feats_path):
                     mask[i] = 1
                 else:
                     self.num_missing += 1
-
-        self.videos = data_split[mask, 0]
-        labels = [int(x[3:]) - 1 for x in data_split[mask, 7]]
-        self.labels = np.array(labels, dtype=np.int32)
+        self.labels = np.array(labels_list, dtype=np.int64).squeeze()[mask]   # , :]
+        self.videos = np.array(vidname_list)[mask]
 
     def __len__(self):
         return len(self.videos)
 
     def __getitem__(self, idx):
         name = self.videos[idx]
-        name, _ = os.path.splitext(name)
+        # name, _ = os.path.splitext(name)
 
-        feats_path = os.path.join(self.root_dir, self.local_folder, name + '.npy')
-        global_path = os.path.join(self.root_dir, self.global_folder, name + '.npy')
-
+        feats_path = os.path.join(self.root_dir, self.local_folder, name + '.npy')  #
+        global_path = os.path.join(self.root_dir, self.global_folder, name + '.npy')  #
         feats = np.load(feats_path)
         feat_global = np.load(global_path)
-        label = np.int64(self.labels[idx])
+        label = self.labels[idx]
 
         return feats, feat_global, label, name

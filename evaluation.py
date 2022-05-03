@@ -6,13 +6,13 @@ from torch.utils.data import DataLoader
 from sklearn.metrics import average_precision_score, accuracy_score
 import numpy as np
 
-from datasets import FCVID, YLIMED, ACTNET
+from datasets import FCVID, miniKINETICS, ACTNET
 from model import ModelGCNConcAfter as Model
 
 parser = argparse.ArgumentParser(description='GCN Video Classification')
 parser.add_argument('model', nargs=1, help='trained model')
 parser.add_argument('--gcn_layers', type=int, default=2, help='number of gcn layers')
-parser.add_argument('--dataset', default='fcvid', choices=['fcvid', 'ylimed', 'actnet'])
+parser.add_argument('--dataset', default='fcvid', choices=['fcvid', 'minikinetics', 'actnet'])
 parser.add_argument('--dataset_root', default='/home/dimidask/Projects/FCVID', help='dataset root directory')
 parser.add_argument('--batch_size', type=int, default=64, help='batch size')
 parser.add_argument('--num_objects', type=int, default=50, help='number of objects with best DoC')
@@ -54,8 +54,8 @@ def main():
         dataset = FCVID(args.dataset_root, is_train=False, ext_method=args.ext_method)
     elif args.dataset == 'actnet':
         dataset = ACTNET(args.dataset_root, is_train=False, ext_method=args.ext_method)
-    elif args.dataset == 'ylimed':
-        dataset = YLIMED(args.dataset_root, is_train=False, ext_method=args.ext_method)
+    elif args.dataset == 'minikinetics':
+        dataset = miniKINETICS(args.dataset_root, is_train=False, ext_method=args.ext_method)
     else:
         sys.exit("Unknown dataset!")
     device = torch.device('cuda:0')
@@ -89,14 +89,14 @@ def main():
 
     if args.dataset == 'fcvid':
         ap = average_precision_score(dataset.labels, scores)
-        print('mAP={:.2f}% dt={:.2f}sec'.format(100 * ap, t1 - t0))
+        print('top1={:.2f}% dt={:.2f}sec'.format(100 * ap, t1 - t0))
     elif args.dataset == 'actnet':
         ap = average_precision_score(dataset.labels, scores)
-        print('mAP={:.2f}% dt={:.2f}sec'.format(100 * ap, t1 - t0))
-    elif args.dataset == 'ylimed':
-        pred = scores.argmax(axis=1)
-        acc = accuracy_score(dataset.labels, pred)
-        print('accuracy={:.2f}% dt={:.2f}sec'.format(100 * acc, t1 - t0))
+        print('top1={:.2f}% dt={:.2f}sec'.format(100 * ap, t1 - t0))
+    elif args.dataset == 'minikinetics':
+        top1 = top_k_accuracy_score(dataset.labels, scores, k=1)
+        top5 = top_k_accuracy_score(dataset.labels, scores, k=5)
+        print('top1 = {:.2f}%, top5 = {:.2f}% dt = {:.2f}sec'.format(100 * top1, 100 * top5, t1 - t0))
 
 
 if __name__ == '__main__':

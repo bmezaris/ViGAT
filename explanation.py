@@ -9,13 +9,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 from sklearn.preprocessing import MinMaxScaler
 
-from datasets import FCVID, YLIMED, ACTNET
+from datasets import FCVID, miniKINETICS, ACTNET
 from model import ModelGCNConcAfter as Model
 
 parser = argparse.ArgumentParser(description='GCN Video Classification')
 parser.add_argument('model', nargs=1, help='trained model')
 parser.add_argument('--gcn_layers', type=int, default=2, help='number of gcn layers')
-parser.add_argument('--dataset', default='actnet', choices=['fcvid', 'ylimed', 'actnet'])
+parser.add_argument('--dataset', default='actnet', choices=['fcvid', 'minikinetics', 'actnet'])
 parser.add_argument('--dataset_root', default='/home/dimidask/Projects/ActivityNet120', help='dataset root directory')
 parser.add_argument('--batch_size', type=int, default=64, help='batch size')
 parser.add_argument('--num_objects', type=int, default=50, help='number of objects with best DoC')
@@ -68,8 +68,8 @@ def main():
         dataset = FCVID(args.dataset_root, is_train=False, ext_method=args.ext_method)
     elif args.dataset == 'actnet':
         dataset = ACTNET(args.dataset_root, is_train=False, ext_method=args.ext_method)
-    elif args.dataset == 'ylimed':
-        dataset = YLIMED(args.dataset_root, is_train=False, ext_method=args.ext_method)
+    elif args.dataset == 'minikinetics':
+        dataset = miniKINETICS(args.dataset_root, is_train=False, ext_method=args.ext_method)
     else:
         sys.exit("Unknown dataset!")
     device = torch.device('cuda:0')

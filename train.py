@@ -7,12 +7,12 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 
-from datasets import FCVID, YLIMED, ACTNET
+from datasets import FCVID, miniKINETICS, ACTNET
 from model import ModelGCNConcAfter as Model
 
 parser = argparse.ArgumentParser(description='GCN Video Classification')
 parser.add_argument('--gcn_layers', type=int, default=2, help='number of gcn layers')
-parser.add_argument('--dataset', default='actnet', choices=['fcvid', 'ylimed', 'actnet'])
+parser.add_argument('--dataset', default='actnet', choices=['fcvid', 'minikinetics', 'actnet'])
 parser.add_argument('--dataset_root', default='/home/dimidask/Projects/ActivityNet120', help='dataset root directory')
 parser.add_argument('--lr', type=float, default=1e-4, help='initial learning rate')
 parser.add_argument('--milestones', nargs="+", type=int, default=[110, 160], help='milestones of learning decay')
@@ -58,8 +58,8 @@ def main():
     elif args.dataset == 'actnet':
         dataset = ACTNET(args.dataset_root, is_train=True, ext_method=args.ext_method)
         crit = nn.BCEWithLogitsLoss()
-    elif args.dataset == 'ylimed':
-        dataset = YLIMED(args.dataset_root, is_train=True, ext_method=args.ext_method)
+    elif args.dataset == 'minikinetics':
+        dataset = miniKINETICS(args.dataset_root, is_train=True, ext_method=args.ext_method)
         crit = nn.CrossEntropyLoss()
     else:
         sys.exit("Unknown dataset!")
@@ -102,8 +102,8 @@ def main():
                 'opt_state_dict': opt.state_dict(),
                 'sched_state_dict': sched.state_dict()
             }, spth)
-            if args.verbose:
-                print("[epoch {}] loss={} dt={:.2f}sec".format(epoch + 1, loss, t1 - t0))
+        if args.verbose:
+            print("[epoch {}] loss={} dt={:.2f}sec".format(epoch + 1, loss, t1 - t0))
 
 
 if __name__ == '__main__':
