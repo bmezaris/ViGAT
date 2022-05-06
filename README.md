@@ -1,4 +1,4 @@
-# Weight-tied GCNs for event recognition in video
+# ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention networrk
 
 This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access vol. XX, no. X, pp. XXX-XXX, month, 2022
 
