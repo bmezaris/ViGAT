@@ -87,11 +87,11 @@ The data stored in the ftp server are:
 * FCVID features extracted using ViT to be placed in the FCVID dataset root directory (~110 GB): FCVID_feats.z01, FCVID_feats.z02, FCVID_feats.z03, FCVID_feats.zip
 * ActivityNet features extracted using RESNET to be placed in the ActivityNet dataset root directory (~630 GB): ACTNET_feats_RESNET.z01, ACTNET_feats_RESNET.z02, ACTNET_feats_RESNET.z03, ACTNET_feats_RESNET.z04, ACTNET_feats_RESNET.z05, ACTNET_feats_RESNET.z06, ACTNET_feats_RESNET.z07, ACTNET_feats_RESNET.z08, ACTNET_feats_RESNET.z09, ACTNET_feats_RESNET.z10, ACTNET_feats_RESNET.z11, ACTNET_feats_RESNET.z12, ACTNET_feats_RESNET.z13, ACTNET_feats_RESNET.z14, ACTNET_feats_RESNET.z15, ACTNET_feats_RESNET.z16, ACTNET_feats_RESNET.z17, ACTNET_feats_RESNET.zip
 * ActivityNet features extracted using ViT to be placed in the ActivityNet dataset root directory (~240 GB): ACTNET_feats.z01, ACTNET_feats.z02, ACTNET_feats.z03, ACTNET_feats.z04, ACTNET_feats.z05, ACTNET_feats.z06, ACTNET_feats.zip
-* miniKinetics features extracted using ResNet-152 to be placed in the miniKinetics dataset root directory (TODO GB): miniKinetics_feats_RESNET.zip
+* miniKinetics features extracted using ResNet-152 to be placed in the miniKinetics dataset root directory (934 GB): miniKinetics_feats_RESNET.z01, miniKinetics_feats_RESNET.z02, miniKinetics_feats_RESNET.z03, miniKinetics_feats_RESNET.z04, miniKinetics_feats_RESNET.z05, miniKinetics_feats_RESNET.z06, miniKinetics_feats_RESNET.z07, miniKinetics_feats_RESNET.z08, miniKinetics_feats_RESNET.z09, miniKinetics_feats_RESNET.z10, miniKinetics_feats_RESNET.z11, miniKinetics_feats_RESNET.z12, miniKinetics_feats_RESNET.z13, miniKinetics_feats_RESNET.z14, miniKinetics_feats_RESNET.z15, miniKinetics_feats_RESNET.z16, miniKinetics_feats_RESNET.z17, miniKinetics_feats_RESNET.z18, miniKinetics_feats_RESNET.z19, miniKinetics_feats_RESNET.z20, miniKinetics_feats_RESNET.z21 miniKinetics_feats_RESNET.zip
 * miniKinetics features extracted using ViT to be placed in the miniKinetics dataset root directory (TODO GB): miniKinetics_feats.zip
 * FCVID keyframes used, bounding boxes, classes ids and classes scores (~600 MB): FCVID_boxes_etc.zip
 * ActivityNet keyframes used, bounding boxes, classes ids and classes scores (~1 GB): ACTNET_boxes_etc.zip
-* miniKinetics bounding boxes used, classes ids and classes scores (~TODO GB): miniKinetics_boxes_etc.zip
+* miniKinetics bounding boxes used, classes ids and classes scores (~6.4 GB): miniKinetics_boxes_etc.zip
 Regarding the frames used for the extraction of the provided feats, we extracted 25 frames from each video for FCVID, 30 frames for each video for miniKinetics and used a sampling rate of 1 frame/second for ActivityNet, resulting in around 3 to 6 thousands frames per video. From those, we (randomly) selected 9/30/120 and kept the indices of the selected frames per video in a .txt file, included in the *dataset*_boxes_etc.zip file.
 ## License and Citation
 
@@ -123,7 +123,7 @@ This work was supported by the EU Horizon 2020 programme under grant agreements 
 
 [2] B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. ActivityNet: A large-scale video benchmark for human activity understanding. In Proc. IEEE CVPR, 2015, pp. 961–970.
 
-[3] TO DO ADD miniKinetics dataset
+[3] Saining Xie, Chen Sun, Jonathan Huang, Zhuowen Tu and Kevin Murphy. Rethinking Spatiotemporal Feature Learning: Speed-Accuracy Trade-offs in Video Classification. In Proc. ECCV, 2018, pp. 305-321
 
 [4] P. Anderson, X. He, C. Buehler, D. Teney, M. Johnson et al. Bottomup and top-down attention for image captioning and visual question answering. In Proc. ICVGIP, Hyderabad, India, Dec. 2018, pp. 6077–6086.
 
