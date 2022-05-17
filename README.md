@@ -12,19 +12,19 @@ This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalaki
 
 Before training Video GAT (ViGAT) on any video dataset, the videos must be preprocessed and converted to an appropriate format for efficient data loading.
 Specifically, we sample 9 frames per video for FCVID, 30 frames for miniKinetics and 120 frames per video for ActivityNet.
-A frame feature representation is obtained using a  Vision Transformer (ViT) [6] or ResNet-152 [7] backbone. Moreover, each frame is also represented using buttom-up information, i.e., the Faster R-CNN is used as object detector (OD) [4,5] and a feature representation for each object is obtained by applying the network backbone (ViT or ResNet-152) for each object region.
-Following video preprocessing, the dataset root directory must contain the following subdirectories:
-* For usage of the ViT extractor:
+A global frame feature representation is obtained using a  Vision Transformer (ViT) [6] or ResNet-152 [7] backbone. Moreover, a local frame feature representation is also obtained, i.e., the Faster R-CNN is used as object detector (OD) [4,5] and a feature representation for each object is obtained by applying the network backbone (ViT or ResNet-152) for each object region.
+After the video preprocessing stage (i.e. running the Faster-RCNN and network backbone), the dataset root directory must contain the following subdirectories:
+* When ViT backbone is used:
   * ```vit_global/```: Numpy arrays of size 9x768 (or 120x768) containing the global frame feature vectors for each video (the 9 (120) frames, times the 768-element vector for each frame).
   * ```vit_local/```: Numpy arrays of size 9x50x768 (or 120x50x768) containing the appearance feature vectors of the detected frame objects for each video (the 9 (120) frames, times the 50 most-prominent objects identified by the object detector, times a 768-element vector for each object bounding box).
-* For usage of the ResNet-152 extractor:
+* When ResNet-152 backbone is used:
   * ```R152_global/```: Numpy arrays of size 9x2048 (or 120x2048) containing the global frame feature vectors for each video (the 9 (120) frames, times the 2048-element vector for each frame).
   * ```R152_local/```: Numpy arrays of size 9x50x2048 (or 120x50x2048) containing the appearance feature vectors of the detected frame objects for each video (the 9 (120) frames, times the 50 most-prominent objects identified by the object detector, times a 2048-element vector for each object bounding box).
 
-In addition, the root directory must contain the associated dataset metadata:
-* The FCVID root directory must contain a ```materials/``` subdirectory with the official training/test split _FCVID\_VideoName\_TrainTestSplit.txt_ and the video event labels _FCVID\_Label.txt_.
-* The ActivityNet root directory must contain the officials training/val split _actnet\_train\_split.txt_ and _actnet\_val\_split.txt_
-* The miniKinetics root directory must contain the official training/val split.
+Additionally, the root directory must contain the dataset metadata associated with the dataset:
+* For the FCVID, the root directory must contain a ```materials/``` subdirectory with the official training/test split _FCVID\_VideoName\_TrainTestSplit.txt_ and the video event labels _FCVID\_Label.txt_.
+* For the ActivityNet, the root directory must contain the officials training/val split _actnet\_train\_split.txt_ and _actnet\_val\_split.txt_
+* The the miniKinetics, the root directory must contain the official training/val split.
 
 
 ## Training
@@ -59,7 +59,7 @@ As previously, the explanation parameters can be modified by specifying the appr
 ## Usage
 
 To run the code for the different datasets (FCVID, ActivityNet, miniKinetics) use the corresponding settings described in the paper.
-For instance, to train the model end-to-end and evaluate it using the FCVID dataset and ResNet features , run
+For instance, to train the model end-to-end and evaluate it using the FCVID dataset and ResNet features, run
 ```
 python train.py --dataset_root <FCVID root directory> --dataset fcvid --num_epochs 90 --ext_method RESNET --milestones 30 60 --lr 1e-4 --batch_size 64
 ```
@@ -125,7 +125,7 @@ This work was supported by the EU Horizon 2020 programme under grant agreements 
 
 [3] Saining Xie, Chen Sun, Jonathan Huang, Zhuowen Tu and Kevin Murphy. Rethinking Spatiotemporal Feature Learning: Speed-Accuracy Trade-offs in Video Classification. In Proc. ECCV, 2018, pp. 305-321
 
-[4] P. Anderson, X. He, C. Buehler, D. Teney, M. Johnson et al. Bottomup and top-down attention for image captioning and visual question answering. In Proc. ICVGIP, Hyderabad, India, Dec. 2018, pp. 6077–6086.
+[4] P. Anderson, X. He, C. Buehler, D. Teney, M. Johnson et al. Bottom-up and top-down attention for image captioning and visual question answering. In Proc. ICVGIP, Hyderabad, India, Dec. 2018, pp. 6077–6086.
 
 [5] S. Ren, K. He, R. Girshick, and J. Sun, “Faster R-CNN: Towards realtime object detection with region proposal networks. In Proc. NIPS, vol. 28, 2015.
 
