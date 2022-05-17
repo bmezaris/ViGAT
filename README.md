@@ -12,7 +12,7 @@ This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalaki
 
 Before training Video GAT (ViGAT) on any video dataset, the videos must be preprocessed and converted to an appropriate format for efficient data loading.
 Specifically, we sample 9 frames per video for FCVID, 30 frames for miniKinetics and 120 frames per video for ActivityNet;
-on each frame, a variant of the Faster R-CNN is used as object detector (OD) [4,5] and the Vision Transformer (ViT) [6] or ResNet-152 [7] is used as our backbone for extracting a feature vector representation for the entire frame as well for each object region.
+A frame feature representation is obtained using a  Vision Transformer (ViT) [6] or ResNet-152 [7] backbone. Moreover, each frame is also represented using buttom-up information; i.e., the Faster R-CNN is used as object detector (OD) [4,5] and a feature representation for each object is obtained by applying the network backbone (ViT or ResNet-152) for each object region.
 Following video preprocessing, the dataset root directory must contain the following subdirectories:
 * For usage of the ViT extractor:
   * ```vit_global/```: Numpy arrays of size 9x768 (or 120x768) containing the global frame feature vectors for each video (the 9 (120) frames, times the 768-element vector for each frame).
