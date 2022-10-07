@@ -24,7 +24,7 @@ After the video preprocessing stage (i.e. running the Faster-RCNN and network ba
 Additionally, the root directory must contain the dataset metadata associated with the dataset:
 * For the FCVID, the root directory must contain a ```materials/``` subdirectory with the official training/test split _FCVID\_VideoName\_TrainTestSplit.txt_ and the video event labels _FCVID\_Label.txt_.
 * For the ActivityNet, the root directory must contain the officials training/val split _actnet\_train\_split.txt_ and _actnet\_val\_split.txt_
-* The the miniKinetics, the root directory must contain the official training/val split.
+* For the miniKinetics 135k or 85k, the root directory must contain the official training/val split.
 
 
 ## Training
@@ -58,7 +58,7 @@ As previously, the explanation parameters can be modified by specifying the appr
 
 ## Usage
 
-To run the code for the different datasets (FCVID, ActivityNet, miniKinetics) use the corresponding settings described in the paper.
+To run the code for the different datasets (FCVID, ActivityNet, miniKinetics 135k or 85k) use the corresponding settings described in the paper.
 For instance, to train the model end-to-end and evaluate it using the FCVID dataset and ResNet features, run
 ```
 python train.py --dataset_root <FCVID root directory> --dataset fcvid --num_epochs 90 --ext_method RESNET --milestones 30 60 --lr 1e-4 --batch_size 64
@@ -73,8 +73,10 @@ In this repository, we provide the following models presented in our paper:
 * _model-fcvid-vit-200.pt_ : FCVID model using ViT FE trained for 200 epochs with initial lr 1e-4 and scheduling at 50 and 90 epochs.
 * _model-actnet-resnet-090.pt_ : ActivityNet model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
 * _model-actnet-vit-200.pt_ : ActivityNet model using ViT FE trained for 200 epochs with initial lr 1e-4 and scheduling at 110 and 160 epochs.
-* _model-minikinetics-resnet-090.pt_ : miniKinetics model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
-* _model-minikinetics-vit-200.pt_ : miniKinetics model using ViT FE trained for 200 epochs with initial lr 1e-3 and scheduling at 110 and 160 epochs.
+* _model-minikinetics85k-resnet-090.pt_ : miniKinetics85k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
+* _model-minikinetics85k-vit-200.pt_ : miniKinetics85k model using ViT FE trained for 200 epochs with initial lr 1e-3 and scheduling at 110 and 160 epochs.
+* _model-minikinetics135k-resnet-090.pt_ : miniKinetics135k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
+* _model-minikinetics135k-vit-200.pt_ : miniKinetics135k model using ViT FE trained for 200 epochs with initial lr 1e-3 and scheduling at 110 and 160 epochs.
 
 Features, bounding boxes and other useful materials extracted during our experiments are provided in the following ftp server:
 ```
@@ -101,7 +103,7 @@ N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and 
 
 Bibtex:
 ```
-@article{WTGCN_CSVT21,
+@article{ViGAT_Access22,
                author    = "N. Gkalelis and D.Daskalakis and V. Mezaris",
                title     = "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network",
                journal   = "IEEE Access",
