@@ -24,7 +24,7 @@ After the video preprocessing stage (i.e. running the Faster-RCNN and network ba
 Additionally, the root directory must contain the dataset metadata associated with the dataset:
 * For the FCVID, the root directory must contain a ```materials/``` subdirectory with the official training/test split _FCVID\_VideoName\_TrainTestSplit.txt_ and the video event labels _FCVID\_Label.txt_.
 * For the ActivityNet, the root directory must contain the officials training/val split _actnet\_train\_split.txt_ and _actnet\_val\_split.txt_
-* For the miniKinetics 135k or 85k, the root directory must contain the official training/val split.
+* For the miniKinetics 130k or 85k, the root directory must contain the official training/val split.
 
 
 ## Training
@@ -74,9 +74,9 @@ In this repository, we provide the following models presented in our paper:
 * _model-actnet-resnet-090.pt_ : ActivityNet model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
 * _model-actnet-vit-200.pt_ : ActivityNet model using ViT FE trained for 200 epochs with initial lr 1e-4 and scheduling at 110 and 160 epochs.
 * _model-minikinetics85k-resnet-090.pt_ : miniKinetics85k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
-* _model-minikinetics85k-vit-200.pt_ : miniKinetics85k model using ViT FE trained for 200 epochs with initial lr 1e-3 and scheduling at 110 and 160 epochs.
-* _model-minikinetics135k-resnet-090.pt_ : miniKinetics135k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
-* _model-minikinetics135k-vit-200.pt_ : miniKinetics135k model using ViT FE trained for 200 epochs with initial lr 1e-3 and scheduling at 110 and 160 epochs.
+* _model-minikinetics85k-vit-100.pt_ : miniKinetics85k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
+* _model-minikinetics130k-resnet-090.pt_ : miniKinetics130k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
+* _model-minikinetics130k-vit-100.pt_ : miniKinetics130k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
 
 Features, bounding boxes and other useful materials extracted during our experiments are provided in the following ftp server:
 ```
