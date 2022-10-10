@@ -73,10 +73,10 @@ In this repository, we provide the following models presented in our paper:
 * _model-fcvid-vit-200.pt_ : FCVID model using ViT FE trained for 200 epochs with initial lr 1e-4 and scheduling at 50 and 90 epochs.
 * _model-actnet-resnet-090.pt_ : ActivityNet model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
 * _model-actnet-vit-200.pt_ : ActivityNet model using ViT FE trained for 200 epochs with initial lr 1e-4 and scheduling at 110 and 160 epochs.
-* _model-minikinetics85k-resnet-090.pt_ : miniKinetics85k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
-* _model-minikinetics85k-vit-100.pt_ : miniKinetics85k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
-* _model-minikinetics130k-resnet-090.pt_ : miniKinetics130k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
-* _model-minikinetics130k-vit-100.pt_ : miniKinetics130k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
+* _model-minikinetics_85k-resnet-090.pt_ : miniKinetics85k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
+* _model-minikinetics_85k-vit-100.pt_ : miniKinetics85k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
+* _model-minikinetics_130k-resnet-090.pt_ : miniKinetics130k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
+* _model-minikinetics_130k-vit-100.pt_ : miniKinetics130k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
 
 Features, bounding boxes and other useful materials extracted during our experiments are provided in the following ftp server:
 ```
