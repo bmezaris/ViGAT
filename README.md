@@ -2,7 +2,7 @@
 
 This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access vol. XX, no. X, pp. XXX-XXX, month, 2022
 
-## Traning and assessment
+## ViGAT scripts, and traning and evaluation procedures
 
 ### Code requirements
 
@@ -69,7 +69,7 @@ python train.py --dataset_root <FCVID root directory> --dataset fcvid --num_epoc
 python evaluation.py weights/model-fcvid-resnet-090.pt --dataset_root <FCVID root directory> --dataset fcvid --ext_method RESNET
 ```
 
-## Provided materials
+## Additional materials: extracted features and trained ViGAT models
 
 In this repository, we provide the models that use ViT features, as presented in our paper:
 
