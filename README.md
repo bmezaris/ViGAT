@@ -69,31 +69,33 @@ python evaluation.py weights/model-fcvid-resnet-090.pt --dataset_root <FCVID roo
 
 ## Provided materials
 In this repository, we provide the following models presented in our paper:
-* _model-fcvid-resnet-090.pt_ : FCVID model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
 * _model-fcvid-vit-200.pt_ : FCVID model using ViT FE trained for 200 epochs with initial lr 1e-4 and scheduling at 50 and 90 epochs.
-* _model-actnet-resnet-090.pt_ : ActivityNet model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
 * _model-actnet-vit-200.pt_ : ActivityNet model using ViT FE trained for 200 epochs with initial lr 1e-4 and scheduling at 110 and 160 epochs.
-* _model-minikinetics_85k-resnet-090.pt_ : miniKinetics85k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
 * _model-minikinetics_85k-vit-100.pt_ : miniKinetics85k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
-* _model-minikinetics_130k-resnet-090.pt_ : miniKinetics130k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
 * _model-minikinetics_130k-vit-100.pt_ : miniKinetics130k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
 
-Features, bounding boxes and other useful materials extracted during our experiments are provided in the following ftp server:
+Due to size liminations of github, models trained using ResNet features as well as features, bounding boxes and other useful materials extracted during our experiments are provided in the following ftp server:
 ```
 ftp://multimedia2.iti.gr
 ```
 To request access credentials for the ftp please send an email to: bmezaris@iti.gr, gkalelis@iti.gr.
 
 The data stored in the ftp server are:
-* FCVID features extracted using ResNet-152 to be placed in the FCVID dataset root directory (~320 GB): FCVID.z01, FCVID.z02, FCVID.z03, FCVID.z04, FCVID.z05, FCVID.z06, FCVID.z07, FCVID.z08, FCVID.z09, FCVID.zip
-* FCVID features extracted using ViT to be placed in the FCVID dataset root directory (~110 GB): FCVID_feats.z01, FCVID_feats.z02, FCVID_feats.z03, FCVID_feats.zip
-* ActivityNet features extracted using RESNET to be placed in the ActivityNet dataset root directory (~630 GB): ACTNET_feats_RESNET.z01, ACTNET_feats_RESNET.z02, ACTNET_feats_RESNET.z03, ACTNET_feats_RESNET.z04, ACTNET_feats_RESNET.z05, ACTNET_feats_RESNET.z06, ACTNET_feats_RESNET.z07, ACTNET_feats_RESNET.z08, ACTNET_feats_RESNET.z09, ACTNET_feats_RESNET.z10, ACTNET_feats_RESNET.z11, ACTNET_feats_RESNET.z12, ACTNET_feats_RESNET.z13, ACTNET_feats_RESNET.z14, ACTNET_feats_RESNET.z15, ACTNET_feats_RESNET.z16, ACTNET_feats_RESNET.z17, ACTNET_feats_RESNET.zip
-* ActivityNet features extracted using ViT to be placed in the ActivityNet dataset root directory (~240 GB): ACTNET_feats.z01, ACTNET_feats.z02, ACTNET_feats.z03, ACTNET_feats.z04, ACTNET_feats.z05, ACTNET_feats.z06, ACTNET_feats.zip
-* miniKinetics features extracted using ResNet-152 to be placed in the miniKinetics dataset root directory (934 GB): miniKinetics_feats_RESNET.z01, miniKinetics_feats_RESNET.z02, miniKinetics_feats_RESNET.z03, miniKinetics_feats_RESNET.z04, miniKinetics_feats_RESNET.z05, miniKinetics_feats_RESNET.z06, miniKinetics_feats_RESNET.z07, miniKinetics_feats_RESNET.z08, miniKinetics_feats_RESNET.z09, miniKinetics_feats_RESNET.z10, miniKinetics_feats_RESNET.z11, miniKinetics_feats_RESNET.z12, miniKinetics_feats_RESNET.z13, miniKinetics_feats_RESNET.z14, miniKinetics_feats_RESNET.z15, miniKinetics_feats_RESNET.z16, miniKinetics_feats_RESNET.z17, miniKinetics_feats_RESNET.z18, miniKinetics_feats_RESNET.z19, miniKinetics_feats_RESNET.z20, miniKinetics_feats_RESNET.z21 miniKinetics_feats_RESNET.zip
-* miniKinetics features extracted using ViT to be placed in the miniKinetics dataset root directory (358 GB): miniKinetics_feats.z01, miniKinetics_feats.z02, miniKinetics_feats.z03, miniKinetics_feats.z04, miniKinetics_feats.z05, miniKinetics_feats.z06, miniKinetics_feats.z07, miniKinetics_feats.z08, miniKinetics_feats.zip
-* FCVID keyframes used, bounding boxes, classes ids and classes scores (~600 MB): FCVID_boxes_etc.zip
-* ActivityNet keyframes used, bounding boxes, classes ids and classes scores (~1 GB): ACTNET_boxes_etc.zip
-* miniKinetics bounding boxes used, classes ids and classes scores (~6.4 GB): miniKinetics_boxes_etc.zip
+* _model-fcvid-resnet-090.pt_ (~300 MB) : FCVID model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
+* _model-actnet-resnet-090.pt_ (~300 MB) : ActivityNet model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
+* _model-minikinetics_85k-resnet-090.pt_ (~300 MB): miniKinetics85k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
+* _model-minikinetics_130k-resnet-090.pt_ (~300 MB): miniKinetics130k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
+
+* FCVID features extracted using ResNet-152 to be placed in the FCVID dataset root directory (~320 GB)
+* FCVID features extracted using ViT to be placed in the FCVID dataset root directory (~110 GB)
+* ActivityNet features extracted using RESNET to be placed in the ActivityNet dataset root directory (~630 GB)
+* ActivityNet features extracted using ViT to be placed in the ActivityNet dataset root directory (~240 GB)
+* miniKinetics_85k features extracted using ResNet-152 to be placed in the miniKinetics dataset root directory (934 GB)
+* miniKinetics_85k features extracted using ViT to be placed in the miniKinetics dataset root directory (358 GB)
+* FCVID keyframes used, bounding boxes, classes ids and classes scores (~600 MB)
+* ActivityNet keyframes used, bounding boxes, classes ids and classes scores (~1 GB)
+* miniKinetics bounding boxes used, classes ids and classes scores (~6.4 GB)
+
 Regarding the frames used for the extraction of the provided feats, we extracted 25 frames from each video for FCVID, 30 frames for each video for miniKinetics and used a sampling rate of 1 frame/second for ActivityNet, resulting in around 3 to 6 thousands frames per video. From those, we (randomly) selected 9/30/120 and kept the indices of the selected frames per video in a .txt file, included in the *dataset*_boxes_etc.zip file.
 ## License and Citation
 
