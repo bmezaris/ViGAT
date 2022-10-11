@@ -98,9 +98,19 @@ The data stored in the ftp server are:
 
 Regarding the frames used for the extraction of the provided feats, for FCVID we extracted 25 frames and selected (randomly) 9 frames per video, while, for ActivityNet we used a sampling rate of 1 frame/second, resulting to approximately 6 thousands frames per video, and selected 120 frames per video. The frame indices of the selected frames were saved in a .txt file, included in the *dataset*\_boxes_etc.zip file.  Similarly, for MiniKinetics85K we extracted 30 frames per video, and for MiniKinetics130K 120 frames and selected 30 frames per video. 
 
-## License and Citation
+## License
 
-The code of our ViGAT method is provided for academic, non-commercial use only. Please also check for any restrictions applied in the code parts and datasets used here from other sources (e.g. provided datasets [1,2,3], etc.). If you find the ViGAT code or any of the provided materials useful in your work, please cite the following publication where this approach was proposed:
+Copyright (c) 2022, Nikolaos Gkalelis, Dimitrios Daskalakis, Vasileios Mezaris / CERTH-ITI. All rights reserved. This code is provided for academic, non-commercial use only. Please also check for any restrictions applied in the code parts and datasets used here from other sources (e.g. provided datasets [1,2,3], etc.). Redistribution and use in source and binary forms, with or without modification, are permitted for academic non-commercial use provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation provided with the distribution.
+
+This software is provided by the authors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the authors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.
+
+## Citation
+
+If you find the ViGAT code or any of the provided materials useful in your work, please cite the following publication where this approach was proposed:
 
 N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access, vol. XX, no. X, pp. XXX, Month, 2022.
 
