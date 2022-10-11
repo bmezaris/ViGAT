@@ -2,13 +2,15 @@
 
 This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access vol. XX, no. X, pp. XXX-XXX, month, 2022
 
-## Code requirements
+## Traning and assessment
+
+### Code requirements
 
 * numpy
 * scikit-learn
 * PyTorch
 
-## Video preprocessing
+### Video preprocessing
 
 Before training Video GAT (ViGAT) on any video dataset, the videos must be preprocessed and converted to an appropriate format for efficient data loading.
 Specifically, we sample 9 frames per video for FCVID, 30 frames for miniKinetics and 120 frames per video for ActivityNet.
@@ -27,7 +29,7 @@ Additionally, the root directory must contain the dataset metadata associated wi
 * For the miniKinetics 130k or 85k, the root directory must contain the official training/val split.
 
 
-## Training
+### Training
 
 To train a new model end-to-end using the VIT extractor, run
 ```
@@ -39,7 +41,7 @@ This script will also periodically evaluate the performance of the model.
 
 The training parameters can be modified by specifying the appropriate command line arguments. For more information, run ```python train.py --help```.
 
-## Evaluation
+### Evaluation
 
 To evaluate a model, run
 ```
@@ -47,7 +49,7 @@ python evaluation.py weights/<model name>.pt --dataset_root <dataset dir> --data
 ```
 Again, the evaluation parameters can be modified by specifying the appropriate command line arguments. For more information, run ```python evaluation.py --help```.
 
-## Explanation
+### Explanation
 
 To recreate the metrics for our best model presented in our paper for N frames, run
 ```
@@ -56,7 +58,7 @@ python explanation.py weights/model-actnet-vit-200.pt --dataset_root <dataset di
 As previously, the explanation parameters can be modified by specifying the appropriate command line arguments. For more information, run ```python explanation.py --help```.
 
 
-## Usage
+### Usage
 
 To run the code for the different datasets (FCVID, ActivityNet, miniKinetics 135k or 85k) use the corresponding settings described in the paper.
 For instance, to train the model end-to-end and evaluate it using the FCVID dataset and ResNet features, run
