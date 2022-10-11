@@ -74,18 +74,13 @@ In this repository, we provide the following models presented in our paper:
 * _model-minikinetics_85k-vit-100.pt_ : miniKinetics85k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
 * _model-minikinetics_130k-vit-100.pt_ : miniKinetics130k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
 
-Due to size liminations of github, models trained using ResNet features as well as features, bounding boxes and other useful materials extracted during our experiments are provided in the following ftp server:
-```
-ftp://multimedia2.iti.gr
-```
+Due to size limitations of github, models trained using ResNet features as well as features, bounding boxes and other useful materials extracted during our experiments are provided in a ftp server:
 To request access credentials for the ftp please send an email to: bmezaris@iti.gr, gkalelis@iti.gr.
-
 The data stored in the ftp server are:
-* _model-fcvid-resnet-090.pt_ (~300 MB) : FCVID model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
-* _model-actnet-resnet-090.pt_ (~300 MB) : ActivityNet model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
-* _model-minikinetics_85k-resnet-090.pt_ (~300 MB): miniKinetics85k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
-* _model-minikinetics_130k-resnet-090.pt_ (~300 MB): miniKinetics130k model using ResNet-152 FE trained for 90 epochs with initial lr 1e-4 and scheduling at 30 and 60 epochs.
-
+* _model-fcvid-resnet-090.pt_ (~300 MB)
+* _model-actnet-resnet-090.pt_ (~300 MB)
+* _model-minikinetics_85k-resnet-090.pt_ (~300 MB)
+* _model-minikinetics_130k-resnet-090.pt_ (~300 MB)
 * FCVID features extracted using ResNet-152 to be placed in the FCVID dataset root directory (~320 GB)
 * FCVID features extracted using ViT to be placed in the FCVID dataset root directory (~110 GB)
 * ActivityNet features extracted using RESNET to be placed in the ActivityNet dataset root directory (~630 GB)
