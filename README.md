@@ -13,7 +13,7 @@ This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalaki
 ### Video preprocessing
 
 Before training Video GAT (ViGAT) on any video dataset, the videos must be preprocessed and converted to an appropriate format for efficient data loading.
-Specifically, we sample 9 frames per video for FCVID, 30 frames for miniKinetics and 120 frames per video for ActivityNet.
+Specifically, we sample 9 frames per video for FCVID, 30 frames for MiniKinetics and 120 frames per video for ActivityNet.
 A global frame feature representation is obtained using a  Vision Transformer (ViT) [6] or ResNet-152 [7] backbone. Moreover, a local frame feature representation is also obtained, i.e., the Faster R-CNN is used as object detector (OD) [4,5] and a feature representation for each object is obtained by applying the network backbone (ViT or ResNet-152) for each object region.
 After the video preprocessing stage (i.e. running the Faster-RCNN and network backbone), the dataset root directory must contain the following subdirectories:
 * When ViT backbone is used:
@@ -26,7 +26,7 @@ After the video preprocessing stage (i.e. running the Faster-RCNN and network ba
 Additionally, the root directory must contain the dataset metadata associated with the dataset:
 * For the FCVID, the root directory must contain a ```materials/``` subdirectory with the official training/test split _FCVID\_VideoName\_TrainTestSplit.txt_ and the video event labels _FCVID\_Label.txt_.
 * For the ActivityNet, the root directory must contain the officials training/val split _actnet\_train\_split.txt_ and _actnet\_val\_split.txt_
-* For the miniKinetics 130k or 85k, the root directory must contain the official training/val split.
+* For the MiniKinetics 130k or 85k, the root directory must contain the official training/val split.
 
 
 ### Training
@@ -60,7 +60,7 @@ As previously, the explanation parameters can be modified by specifying the appr
 
 ### Usage
 
-To run the code for the different datasets (FCVID, ActivityNet, miniKinetics 135k or 85k) use the corresponding settings described in the paper.
+To run the code for the different datasets (FCVID, ActivityNet, MiniKinetics 135k or 85k) use the corresponding settings described in the paper.
 For instance, to train the model end-to-end and evaluate it using the FCVID dataset and ResNet features, run
 ```
 python train.py --dataset_root <FCVID root directory> --dataset fcvid --num_epochs 90 --ext_method RESNET --milestones 30 60 --lr 1e-4 --batch_size 64
@@ -70,17 +70,18 @@ python evaluation.py weights/model-fcvid-resnet-090.pt --dataset_root <FCVID roo
 ```
 
 ## Provided materials
-In this repository, we provide the following models presented in our paper:
+
+In this repository, we provide the models that use ViT features, as presented in our paper:
+
 * _model-fcvid-vit-200.pt_ : FCVID model using ViT FE trained for 200 epochs with initial lr 1e-4 and scheduling at 50 and 90 epochs.
 * _model-actnet-vit-200.pt_ : ActivityNet model using ViT FE trained for 200 epochs with initial lr 1e-4 and scheduling at 110 and 160 epochs.
-* _model-minikinetics_85k-vit-100.pt_ : miniKinetics85k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
-* _model-minikinetics_130k-vit-100.pt_ : miniKinetics130k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
+* _model-minikinetics_85k-vit-100.pt_ : MiniKinetics85k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
+* _model-minikinetics_130k-vit-100.pt_ : MiniKinetics130k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
 
-Due to size limitations of github, models trained using ResNet features as well as features, bounding boxes and other useful materials extracted during our experiments are provided in a ftp server:
-
-To request access credentials for the ftp please send an email to: bmezaris@iti.gr, gkalelis@iti.gr.
+Due to size limitations of github, the models trained using ResNet features, as well as features, bounding boxes and other useful materials extracted during our experiments are provided in a our ftp server. To request access credentials for the ftp please send an email to: bmezaris@iti.gr, gkalelis@iti.gr.
 
 The data stored in the ftp server are:
+
 * _model-fcvid-resnet-090.pt_ (~300 MB)
 * _model-actnet-resnet-090.pt_ (~300 MB)
 * _model-minikinetics_85k-resnet-090.pt_ (~300 MB)
@@ -89,13 +90,14 @@ The data stored in the ftp server are:
 * FCVID features extracted using ViT to be placed in the FCVID dataset root directory (~110 GB)
 * ActivityNet features extracted using RESNET to be placed in the ActivityNet dataset root directory (~630 GB)
 * ActivityNet features extracted using ViT to be placed in the ActivityNet dataset root directory (~240 GB)
-* miniKinetics_85k features extracted using ResNet-152 to be placed in the miniKinetics dataset root directory (934 GB)
-* miniKinetics_85k features extracted using ViT to be placed in the miniKinetics dataset root directory (358 GB)
+* MiniKinetics_85k features extracted using ResNet-152 to be placed in the MiniKinetics dataset root directory (934 GB)
+* MiniKinetics_85k features extracted using ViT to be placed in the MiniKinetics dataset root directory (358 GB)
 * FCVID keyframes used, bounding boxes, classes ids and classes scores (~600 MB)
 * ActivityNet keyframes used, bounding boxes, classes ids and classes scores (~1 GB)
-* miniKinetics bounding boxes used, classes ids and classes scores (~6.4 GB)
+* MiniKinetics bounding boxes used, classes ids and classes scores (~6.4 GB)
 
-Regarding the frames used for the extraction of the provided feats, we extracted 25 frames from each video for FCVID, 30 frames for each video for miniKinetics and used a sampling rate of 1 frame/second for ActivityNet, resulting in around 3 to 6 thousands frames per video. From those, we (randomly) selected 9/30/120 and kept the indices of the selected frames per video in a .txt file, included in the *dataset*_boxes_etc.zip file.
+Regarding the frames used for the extraction of the provided feats, we extracted 25 frames from each video for FCVID, 30 frames for each video for MiniKinetics and used a sampling rate of 1 frame/second for ActivityNet, resulting to approximately 6 thousands frames per video. From the extracted frames, we (randomly) selected 9/30/120 frames per video for FCVID, MiniKinetics and ActivityNet, respectively. The frame indices of the selected frames were saved in a .txt file, included in the *dataset*_boxes_etc.zip file.
+
 ## License and Citation
 
 The code of our ViGAT method is provided for academic, non-commercial use only. Please also check for any restrictions applied in the code parts and datasets used here from other sources (e.g. provided datasets [1,2,3], etc.). If you find the ViGAT code or any of the provided materials useful in your work, please cite the following publication where this approach was proposed:
