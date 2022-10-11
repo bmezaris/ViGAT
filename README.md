@@ -96,7 +96,7 @@ The data stored in the ftp server are:
 * ActivityNet keyframes used, bounding boxes, classes ids and classes scores (~1 GB)
 * MiniKinetics bounding boxes used, classes ids and classes scores (~6.4 GB)
 
-Regarding the frames used for the extraction of the provided feats, we extracted 25 frames from each video for FCVID, 30 frames for each video for MiniKinetics and used a sampling rate of 1 frame/second for ActivityNet, resulting to approximately 6 thousands frames per video. From the extracted frames, we (randomly) selected 9/30/120 frames per video for FCVID, MiniKinetics and ActivityNet, respectively. The frame indices of the selected frames were saved in a .txt file, included in the *dataset*_boxes_etc.zip file.
+Regarding the frames used for the extraction of the provided feats, we extracted from each video 25 frames for FCVID, 30 frames for MiniKinetics 85K and used a sampling rate of 1 frame/second for ActivityNet, resulting to approximately 6 thousands frames per video. From the extracted frames, we (randomly) selected 9/120 frames per video for FCVID and ActivityNet, respectively. The frame indices of the selected frames were saved in a .txt file, included in the *dataset*\_boxes_etc.zip file.  Similarly, for  MiniKinetics 130K we extracted 120 frames and selected 30 frames per video. 
 
 ## License and Citation
 
