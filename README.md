@@ -78,9 +78,9 @@ In this repository, we provide the models that use ViT features, as presented in
 * _model-minikinetics_85k-vit-100.pt_ : MiniKinetics85k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
 * _model-minikinetics_130k-vit-100.pt_ : MiniKinetics130k model using ViT FE trained for 100 epochs with initial lr 1e-3 and scheduling at 20 and 50 epochs.
 
-Due to size limitations of github, the models trained using ResNet features, as well as features, bounding boxes and other useful materials extracted during our experiments are provided in a our ftp server. To request access credentials for the ftp please send an email to: bmezaris@iti.gr, gkalelis@iti.gr.
+Due to file size limitations here, additional models trained using ResNet features, as well as features, bounding boxes and other useful materials extracted during our experiments, are available on an ftp server. To request access credentials for the ftp please send an email to: bmezaris@iti.gr, gkalelis@iti.gr.
 
-The data stored in the ftp server are:
+The additional data stored in the ftp server are:
 
 * _model-fcvid-resnet-090.pt_ (~300 MB)
 * _model-actnet-resnet-090.pt_ (~300 MB)
