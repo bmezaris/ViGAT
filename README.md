@@ -128,7 +128,7 @@ Bibtex:
 
 ## Acknowledgements
 
-This work was supported by the EU Horizon 2020 programme under grant agreement 832921 (MIRROR) and 101021866 (CRiTERIA); and, by the QuaLiSID - “Quality of Life Support System for People with Intellectual Disability” project, which is co-financed by the European Union and Greek national funds through the Operational Program Competitiveness, Entrepreneurship and Innovation, under the call RESEARCH-CREATE-INNOVATE (project code: T2EDK-00306).
+This work was supported by the EU Horizon 2020 programme under grant agreements 832921 (MIRROR) and 101021866 (CRiTERIA); and, by the QuaLiSID - “Quality of Life Support System for People with Intellectual Disability” project, which is co-financed by the European Union and Greek national funds through the Operational Program Competitiveness, Entrepreneurship and Innovation, under the call RESEARCH-CREATE-INNOVATE (project code: T2EDK-00306).
 
 
 ## References
