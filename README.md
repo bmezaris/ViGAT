@@ -1,6 +1,6 @@
 # ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network
 
-This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access, 2022. DOI: 10.1109/ACCESS.2022.3213652.
+This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access, 2022. DOI: 10.1109/ACCESS.2022.3213652. https://doi.org/10.1109/ACCESS.2022.3213652
 
 ## ViGAT scripts, and traning and evaluation procedures
 
