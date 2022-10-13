@@ -108,7 +108,7 @@ Redistributions of source code must retain the above copyright notice, this list
 
 If you find the ViGAT code or any of the provided materials useful in your work, please cite the following publication where this approach was proposed:
 
-N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access, 2022. DOI: 10.1109/ACCESS.2022.3213652.
+N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access, 2022. DOI: 10.1109/ACCESS.2022.3213652. https://doi.org/10.1109/ACCESS.2022.3213652
 
 Bibtex:
 ```
