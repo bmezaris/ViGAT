@@ -1,6 +1,6 @@
 # ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network
 
-This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access, 2022. DOI: 10.1109/ACCESS.2022.3213652. https://doi.org/10.1109/ACCESS.2022.3213652
+This repository hosts the code and data for our paper: N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access, vol. 10, pp. 108797-108816, 2022. DOI: 10.1109/ACCESS.2022.3213652. https://doi.org/10.1109/ACCESS.2022.3213652
 
 ## ViGAT scripts, and traning and evaluation procedures
 
@@ -108,21 +108,20 @@ Redistributions of source code must retain the above copyright notice, this list
 
 If you find the ViGAT code or any of the provided materials useful in your work, please cite the following publication where this approach was proposed:
 
-N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access, 2022. DOI: 10.1109/ACCESS.2022.3213652. https://doi.org/10.1109/ACCESS.2022.3213652
+N. Gkalelis, D. Daskalakis, V. Mezaris, "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network", IEEE Access, vol. 10, pp. 108797-108816, 2022. DOI: 10.1109/ACCESS.2022.3213652. https://doi.org/10.1109/ACCESS.2022.3213652
 
 Bibtex:
 ```
-@article{ViGAT_Access22,
-               author    = "N. Gkalelis and D.Daskalakis and V. Mezaris",
-               title     = "ViGAT: Bottom-up event recognition and explanation in video using factorized graph attention network",
-               journal   = "IEEE Access",
-               year      = "2022",
-               volume    = "",
-               month     = "",
-               number    = "",
-               pages     = "",
-               doi       = {10.1109/ACCESS.2022.3213652},
-               url       = {https://doi.org/10.1109/ACCESS.2022.3213652}        
+@ARTICLE{ViGAT_Access22,
+  author={Gkalelis, Nikolaos and Daskalakis, Dimitrios and Mezaris, Vasileios},
+  journal={IEEE Access}, 
+  title={ViGAT: Bottom-Up Event Recognition and Explanation in Video Using Factorized Graph Attention Network}, 
+  year={2022},
+  volume={10},
+  number={},
+  pages={108797-108816},
+  doi={10.1109/ACCESS.2022.3213652},
+  url={https://doi.org/10.1109/ACCESS.2022.3213652}    
 }
 ```
 
